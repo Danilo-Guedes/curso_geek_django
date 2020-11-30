@@ -1,0 +1,43 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% bootstrap_css %}
+        <title>Paginação Django</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Produtos</h1>
+        </div>
+
+        <div class="container">
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Preço</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for p in page_obj %}
+                        <tr>
+                            <th scope="row">{{ p.id }}</th>
+                            <th scope="row">{{ p.nome }}</th>
+                            <th scope="row">{{ p.preco }}</th>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+           {% include 'paginacao.html' %}
+
+        </div>
+    {% bootstrap_javascript jquery='full' %}
+    </body>
+</html>

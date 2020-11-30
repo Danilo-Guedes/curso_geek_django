@@ -1,0 +1,9 @@
+Olá pessoal,
+
+Houve alerações na licença do Geolite2 e o novo link é:
+
+[1]https://dev.maxmind.com/geoip/geoip2/geolite2/
+
+OBS: Aparentemente será necessário criar uma conta para fazer o download.
+
+Abraço!
